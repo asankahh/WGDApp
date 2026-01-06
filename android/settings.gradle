@@ -16,11 +16,12 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
+        maven { url "https://storage.googleapis.com/download.flutter.io" }
     }
 }
 
 plugins {
-    id "dev.flutter.flutter-gradle-plugin" version "1.0.0" apply false
+    id "dev.flutter.flutter-gradle-plugin" apply false
 }
 
 include ":app"
