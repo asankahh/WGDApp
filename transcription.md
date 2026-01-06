@@ -41,3 +41,9 @@
 **USER**: could this be all or is there anything else ? can you check against github actions documentations if they have released any update ?
 **USER**: okey let's proceed
 **Antigravity**: [Implementing comprehensive fix: workflow enhancements (Java 17, permissions), Google Flutter mirror, and robust declarative Gradle setup (8.5/8.2.1).]
+
+**USER**: build failed [Error resolving plugin: Kotlin plugin already on classpath with unknown version]
+**Antigravity**: [Identified conflict between Gradle build phases. The `flutter-gradle-plugin` or build environment introduces the plugin early. Plan: Centralize plugin version management in `settings.gradle` to enforce specific versions before the classpath is locked.]
+
+**USER**: go ahead
+**Antigravity**: [Implementing centralized plugin versioning in `settings.gradle` and cleaning up `build.gradle`.]
