@@ -68,3 +68,9 @@
 
 **USER**: Debug persistent network failures. Add 'Network Probe' step and verbose logging to GitHub Actions.
 **Antigravity**: [Injecting network connectivity tests (curl Maven Central & Google Mirror) and enabling `--verbose` build flags in `.github/workflows/build.yml` to diagnose the root cause.]
+
+**USER**: [Provided truncated CI logs showing `flutter build apk --verbose` output.]
+**Antigravity**: [Analyzed logs: `gradlePluginPortal()` is correctly prioritized. However, the `:app` configuration fails, causing a crash at `evaluationDependsOn`. Suspect transitive dependencies blocked on Maven Central.]
+
+**USER**: Modern setup failing due to 403. Revert to 'Classic' (Imperative) configuration to force Google Mirror usage in buildscript classpath.
+**Antigravity**: [Reverting `android/build.gradle`, `android/settings.gradle`, and `android/app/build.gradle` to imperative style. Explicitly defining `com.android.tools.build:gradle:8.2.1` and `kotlin-gradle-plugin:1.9.24` with Google Mirror prioritized.]

@@ -1,18 +1,36 @@
+buildscript {
+    ext.kotlin_version = '1.9.24'
+    repositories {
+        // 1. Google Mirror (Prioritized to bypass CI blocks)
+        maven { url 'https://storage.googleapis.com/download.flutter.io' }
+        // 2. Gradle Portal (Reliable backup)
+        gradlePluginPortal()
+        // 3. Standard Repos (Fallbacks)
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Explicitly define versions to avoid dynamic resolution errors
+        classpath 'com.android.tools.build:gradle:8.2.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
 allprojects {
     repositories {
-        gradlePluginPortal()
         maven { url 'https://storage.googleapis.com/download.flutter.io' }
+        gradlePluginPortal()
         google()
         mavenCentral()
     }
 }
 
-rootProject.buildDir = "../build"
+rootProject.buildDir = '../build'
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
 }
 subprojects {
-    project.evaluationDependsOn(":app")
+    project.evaluationDependsOn(':app')
 }
 
 tasks.register("clean", Delete) {
