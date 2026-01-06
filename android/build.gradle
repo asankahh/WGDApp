@@ -1,18 +1,16 @@
 allprojects {
     repositories {
         google()
-        gradlePluginPortal()
         mavenCentral()
-        maven { url "https://storage.googleapis.com/download.flutter.io" }
     }
 }
 
-rootProject.buildDir = '../build'
+rootProject.buildDir = "../build"
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
 }
 subprojects {
-    project.evaluationDependsOn(':app')
+    project.evaluationDependsOn(":app")
 }
 
 tasks.register("clean", Delete) {

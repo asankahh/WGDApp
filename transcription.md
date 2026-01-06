@@ -59,3 +59,6 @@
 
 **USER**: yes please. also please note that last failure was 11th. can we figure out a solution fast ?
 **Antigravity**: [Prioritizing `gradlePluginPortal()` over `mavenCentral()` to bypass 403 errors. Executing urgent repository reordering.]
+
+**USER**: Stop trying to patch. Reset build configuration to standard Flutter state. Overwrite `settings.gradle` and `build.gradle`.
+**Antigravity**: [Resetting Android build configuration to clean standard state. Overwriting `settings.gradle` specifically to fix plugin resolution and `build.gradle` to remove complexity.]
