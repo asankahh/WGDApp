@@ -62,3 +62,6 @@
 
 **USER**: Stop trying to patch. Reset build configuration to standard Flutter state. Overwrite `settings.gradle` and `build.gradle`.
 **Antigravity**: [Resetting Android build configuration to clean standard state. Overwriting `settings.gradle` specifically to fix plugin resolution and `build.gradle` to remove complexity.]
+
+**USER**: The 403 error persists. Prioritize `gradlePluginPortal()` to bypass the IP block.
+**Antigravity**: [Strictly reordering repositories in `settings.gradle` and `build.gradle` to place `gradlePluginPortal()` first, acting as a reliable mirror for Kotlin artifacts.]
