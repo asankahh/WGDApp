@@ -65,3 +65,6 @@
 
 **USER**: The 403 error persists. Prioritize `gradlePluginPortal()` to bypass the IP block.
 **Antigravity**: [Strictly reordering repositories in `settings.gradle` and `build.gradle` to place `gradlePluginPortal()` first, acting as a reliable mirror for Kotlin artifacts.]
+
+**USER**: Debug persistent network failures. Add 'Network Probe' step and verbose logging to GitHub Actions.
+**Antigravity**: [Injecting network connectivity tests (curl Maven Central & Google Mirror) and enabling `--verbose` build flags in `.github/workflows/build.yml` to diagnose the root cause.]

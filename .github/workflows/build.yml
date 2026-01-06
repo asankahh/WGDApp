@@ -28,6 +28,13 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      - name: Debug Network Connectivity
+        run: |
+          echo "Testing connectivity to Maven Central..."
+          curl -I -v https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/1.9.22/kotlin-stdlib-1.9.22.pom || true
+          echo "Testing connectivity to Google Mirror..."
+          curl -I -v https://storage.googleapis.com/download.flutter.io/org/jetbrains/kotlin/kotlin-stdlib/1.9.22/kotlin-stdlib-1.9.22.pom || true
+
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
@@ -37,7 +44,7 @@ jobs:
         run: flutter pub get
 
       - name: Build APK
-        run: flutter build apk --release
+        run: flutter build apk --release --verbose
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
