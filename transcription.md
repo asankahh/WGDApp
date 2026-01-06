@@ -47,3 +47,9 @@
 
 **USER**: go ahead
 **Antigravity**: [Implementing centralized plugin versioning in `settings.gradle` and cleaning up `build.gradle`.]
+
+**USER**: build failed [403 Forbidden on `kotlin-stdlib` download (Maven Central). Warnings to upgrade Gradle (8.7+), AGP (8.6+), and Kotlin (2.1+).]
+**Antigravity**: [The 403 persists on Maven Central. The deprecation warnings suggest the environment requires modern tools. Plan: Upgrade Gradle Wrapper to 8.7, AGP to 8.4+, and Kotlin to 1.9.24. Remove redundant explicit `kotlin-stdlib` dependency to rely on the plugin's default.]
+
+**USER**: let's go
+**Antigravity**: [Implementing upgrades: Gradle 8.7, AGP 8.4.2, Kotlin 1.9.24. Removing explicit `kotlin-stdlib`.]
